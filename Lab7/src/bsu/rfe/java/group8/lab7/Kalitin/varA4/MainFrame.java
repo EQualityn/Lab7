@@ -192,7 +192,8 @@ public class MainFrame extends JFrame {
             e.printStackTrace();
             JOptionPane.showMessageDialog(MainFrame.this,
                     "Не удалось отправить сообщение: узел-адресат не найден", "Ошибка", JOptionPane.ERROR_MESSAGE);
-        
+            textFieldTo.setText("");
+            textFieldTo.requestFocusInWindow();
         } catch (IOException e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(MainFrame.this, "Не удалось отправить сообщение", "Ошибка",
